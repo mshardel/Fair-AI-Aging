@@ -1,5 +1,5 @@
 # Fair-AI-Aging
-Predict post-discharge days at home after hospitalization for hip fracture among Medicare fee-for-service beneficiaries.
+Predict post-discharge days at home after hospitalization for hip fracture among Medicare fee-for-service beneficiaries. Programs written by Jeffrey Zhao, MS.
 
 1. internal_crossvalidation.R fits OLS and average constrained regression and validates the models with multiple metrics using data from study years 2010-2016.
 2. external_validation.R fits OLS and average constrained regression using data from study years 2010-2016 and validates the models with multiple metrics using data from study year 2017.
