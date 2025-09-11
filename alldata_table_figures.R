@@ -1,5 +1,5 @@
 ###################################################################################################
-# 3/21/25
+# 9/10/25
 # Author: Jeffery Zhao, MS
 # Department of Biostatistics, Pennsylvania State University
 #
@@ -139,9 +139,16 @@ results_df[which(results_df$Coefficients=="ELX_GRP_11"),"Coefficients"] <- "Diab
 results_df[which(results_df$Coefficients=="ELX_GRP_12"),"Coefficients"] <- "Diabetes, Complicated"
 results_df[which(results_df$Coefficients=="ELX_GRP_13"),"Coefficients"] <- "Hypothyroidism"
 results_df[which(results_df$Coefficients=="ELX_GRP_14"),"Coefficients"] <- "Renal Failure"
+results_df[which(results_df$Coefficients=="ELX_GRP_15"),"Coefficients"] <- "Liver Disease"
+results_df[which(results_df$Coefficients=="ELX_GRP_20"),"Coefficients"] <- "Solid Tumor without Metastasis"
+results_df[which(results_df$Coefficients=="ELX_GRP_21"),"Coefficients"] <- "Rheumatoid Arthritis/collagen"
 results_df[which(results_df$Coefficients=="ELX_GRP_22"),"Coefficients"] <- "Coagulopathy"
+results_df[which(results_df$Coefficients=="ELX_GRP_23"),"Coefficients"] <- "Obesity"
 results_df[which(results_df$Coefficients=="ELX_GRP_24"),"Coefficients"] <- "Weight Loss"
 results_df[which(results_df$Coefficients=="ELX_GRP_25"),"Coefficients"] <- "Fluid and Electrolyte Disorders"
+results_df[which(results_df$Coefficients=="ELX_GRP_26"),"Coefficients"] <- "Blood Loss Anemia"
+results_df[which(results_df$Coefficients=="ELX_GRP_27"),"Coefficients"] <- "Deficiency Anemia"
+results_df[which(results_df$Coefficients=="ELX_GRP_30"),"Coefficients"] <- "Psychoses"
 results_df[which(results_df$Coefficients=="ELX_GRP_31"),"Coefficients"] <- "Depression"
 
 results <- bind_rows(  
