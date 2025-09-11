@@ -1,9 +1,9 @@
 ###################################################################################################
-# 3/21/25
+# 9/10/25
 # Author: Jeffery Zhao, MS
 # Department of Biostatistics, Pennsylvania State University 
 # 
-# This program performs internal cross-validation of study years 2010-2016
+# This program performs internal cross-validation of study years 2010-2017
 # Prediction of 6-month days at home using OLS and Average Constrained Regression
 # Evaluated using R2, predictive ratios by group, mean residuals by group, mean residual difference, 
 # and fair covariance
@@ -19,8 +19,8 @@ library(writexl)
 evaluate_regression <- function(data, train_ratio = 0.7) {
   # Train-Test Split Function for specific years
   train_test_split <- function(data, train_ratio) {
-    # Filter out 2017 data (yearAdmission == 7)
-    data_filtered <- data[data$yearAdmission != 7, ]
+    # Filter out 2018 data (yearAdmission == 8)
+    data_filtered <- data[data$yearAdmission != 8, ]
     
     # Calculate total size and training size
     n <- nrow(data_filtered)
