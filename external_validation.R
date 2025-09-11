@@ -1,11 +1,11 @@
 ###################################################################################################
-# 3/21/25
+# 9/10/25
 # Author: Jeffery Zhao, MS
 # Department of Biostatistics, Pennsylvania State University
 #
-# This program performs external validation: training using study years 2010-2016, 
-# validation using 20
-# Prediction of 6-month days at home using OLS and Average Constrained Regression
+# This program performs external validation: training using study years 2010-2017, 
+# validation using 50
+# Predictions of 6-month days at home using OLS and Average Constrained Regression
 # Evaluated using R2, predictive ratios by group, mean residuals by group, mean residual difference, 
 # and fair covariance
 ####################################################################################################
@@ -19,24 +19,24 @@ library(writexl)
 
 # Train-Test Split Function 
 train_test_split <- function(data, train_ratio = 0.7) {
-  # Separate data from 2010-2016
-  data_2010_2016 <- data[data$yearAdmission != 7, ]
+  # Separate data from 2010-2017
+  data_2010_2017 <- data[data$yearAdmission != 8, ]
   
-  # Calculate training size for 2010-2016 data
-  n_2010_2016 <- nrow(data_2010_2016)
-  train_size <- floor(n_2010_2016 * train_ratio)
+  # Calculate training size for 2010-2017 data
+  n_2010_2017 <- nrow(data_2010_2017)
+  train_size <- floor(n_2010_2017 * train_ratio)
   
-  # Random shuffle of 2010-2016 data
-  shuffled_indices <- sample(n_2010_2016)
+  # Random shuffle of 2010-2017 data
+  shuffled_indices <- sample(n_2010_2017)
   
-  # Split indices for 2010-2016 data
+  # Split indices for 2010-2017 data
   train_indices <- shuffled_indices[1:train_size]
   
-  # Prepare training data from 2010-2016
-  train_data <- data_2010_2016[train_indices, ]
+  # Prepare training data from 2010-2017
+  train_data <- data_2010_2017[train_indices, ]
   
-  # Prepare test data (only from 2017)
-  test_data <- data[data$yearAdmission == 7, ]
+  # Prepare test data (only from 2018)
+  test_data <- data[data$yearAdmission == 8, ]
   
   list(
     train_data = train_data,
