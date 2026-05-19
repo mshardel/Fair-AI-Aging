@@ -1,5 +1,6 @@
+# 4/3/26
 # Author: Jeffery Zhao, MS
-# Department of Biostatistics, Pennsylvania State University 
+# Department of Biostatistics, Pennsylvania State University
 # 
 # This program performs internal cross-validation of study years 2010-2017
 # Prediction of 6-month days at home using OLS and Average Constrained Regression
